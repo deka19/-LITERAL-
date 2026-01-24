@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUNCH - The Taste of India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .zomato-red { color: #E23744; }
+        .bg-zomato-red { background-color: #E23744; }
+        .hero-overlay { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+        
+        /* Animation for the "Best Value" tag */
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(226, 55, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(226, 55, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(226, 55, 68, 0); }
+        }
+        .pulse-animation {
+            animation: pulse-red 2s infinite;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased bg-gray-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-extrabold text-3xl text-white tracking-tighter italic" id="navLogo">CRUNCH.</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#menu" class="text-white hover:text-gray-200 font-medium">The Menu</a>
+                    <a href="#combo" class="text-white hover:text-gray-200 font-medium">Combo Deal</a>
+                </div>
+                <div>
+                    <a href="#menu" class="bg-zomato-red text-white px-6 py-2 rounded-full font-bold hover:bg-red-600 transition shadow-lg">
+                        ORDER NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop class="absolute w-auto min-w-full min-h-full max-w-none object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-eating-potato-chips-in-a-park-4262-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-10">
+            <div class="inline-block bg-yellow-400 text-black font-bold px-3 py-1 rounded mb-4 text-sm tracking-wide">
+                LIMITED STOCK DROP
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+                SIMPLE MENU.<br> <span class="text-zomato-red italic">COMPLEX CRUNCH.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light">
+                We only make two flavors. Because we mastered them.
+            </p>
+            <a href="#menu" class="bg-zomato-red text-white px-10 py-4 rounded-xl text-xl font-bold hover:bg-red-600 transition shadow-2xl inline-flex items-center gap-2">
+                Taste The Difference <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <section id="menu" class="py-20 -mt-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-4">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 md:mt-12">
+                    <div class="h-64 bg-red-100 overflow-hidden relative group">
+                        <img src="img1.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Volcano Red</h3>
+                        <p class="text-gray-500 text-sm mb-4">The Spicy One. Not for the weak hearted.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <span class="text-2xl font-bold text-gray-900">₹40</span>
+                            <button class="border-2 border-gray-200 hover:border-zomato-red hover:bg-red-50 text-gray-900 px-6 py-2 rounded-lg font-bold transition">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-zomato-red transform md:-translate-y-4 relative order-first md:order-none">
+                    <div class="absolute top-0 w-full bg-zomato-red text-white text-center font-bold py-2 uppercase tracking-widest text-sm shadow-md z-10">
+                        Most Popular Choice
+                    </div>
+                    
+                    <div class="h-72 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden relative group">
+                        <img src="img2.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 left-0 right-0 text-center">
+                            <span class="bg-white text-black px-4 py-1 rounded-full text-xs font-bold shadow">Contains Both Flavors</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 text-center bg-red-50">
+                        <h3 class="text-3xl font-extrabold text-gray-900 mb-2">The Duo Box</h3>
+                        <p class="text-gray-600 mb-6">Can't decide? Get both. <br>5x Spicy Packs + 5x Creamy Packs.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-gray-400 line-through text-lg">₹400</span>
+                            <span class="text-4xl font-extrabold text-zomato-red ml-2">₹349</span>
+                        </div>
+
+                        <button class="w-full bg-zomato-red text-white py-4 rounded-xl font-bold text-xl hover:bg-red-600 transition shadow-lg pulse-animation flex items-center justify-center gap-2">
+                            ADD TO CART <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <p class="text-xs text-gray-500 mt-3 flex justify-center items-center gap-1">
+                            <i class="fas fa-truck"></i> Free Shipping included
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 md:mt-12">
+                    <div class="h-64 bg-green-100 overflow-hidden relative group">
+                        <img src="img3.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Velvet Cream</h3>
+                        <p class="text-gray-500 text-sm mb-4">The Smooth One. Herbs, Onion & Cream.</p>
+                        <div class="flex justify-between items-center border-t pt-4">
+                            <span class="text-2xl font-bold text-gray-900">₹40</span>
+                            <button class="border-2 border-gray-200 hover:border-zomato-red hover:bg-red-50 text-gray-900 px-6 py-2 rounded-lg font-bold transition">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white border-t border-b py-8">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-around items-center gap-6 text-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-gray-100 p-3 rounded-full"><i class="fas fa-shield-alt text-zomato-red text-xl"></i></div>
+                <div class="text-left">
+                    <div class="font-bold text-gray-900">Secure Payment</div>
+                    <div class="text-xs text-gray-500">UPI, Cards & Netbanking</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="bg-gray-100 p-3 rounded-full"><i class="fas fa-stopwatch text-zomato-red text-xl"></i></div>
+                <div class="text-left">
+                    <div class="font-bold text-gray-900">Superfast Delivery</div>
+                    <div class="text-xs text-gray-500">Dispatch within 24 Hours</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="bg-gray-100 p-3 rounded-full"><i class="fas fa-leaf text-zomato-red text-xl"></i></div>
+                <div class="text-left">
+                    <div class="font-bold text-gray-900">100% Vegetarian</div>
+                    <div class="text-xs text-gray-500">Made with Real Potatoes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold italic mb-4">CRUNCH.</h2>
+            <p class="text-gray-400 mb-8 max-w-md mx-auto">We keep it simple. Two flavors, infinite crunch. Made in India for the world.</p>
+            <div class="flex justify-center gap-6 text-2xl mb-8">
+                <i class="fab fa-instagram hover:text-zomato-red cursor-pointer transition"></i>
+                <i class="fab fa-facebook hover:text-zomato-red cursor-pointer transition"></i>
+                <i class="fab fa-whatsapp hover:text-zomato-red cursor-pointer transition"></i>
+            </div>
+            <div class="text-gray-600 text-sm">
+                &copy; 2026 Crunch Chips. Guwahati, India.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        const logo = document.getElementById('navLogo');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navbar.querySelectorAll('a').forEach(link => {
+                    if(!link.innerHTML.includes('ORDER NOW')) link.classList.replace('text-white', 'text-gray-900');
+                });
+                logo.classList.replace('text-white', 'text-zomato-red');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.querySelectorAll('a').forEach(link => {
+                    if(!link.innerHTML.includes('ORDER NOW')) link.classList.replace('text-gray-900', 'text-white');
+                });
+                logo.classList.replace('text-zomato-red', 'text-white');
+            }
+        });
+    </script>
+</body>
+</html>
+
